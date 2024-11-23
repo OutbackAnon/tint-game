@@ -1,5 +1,5 @@
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
-eclipse.project.name = appName + '-core'
+eclipse.project.name = appName + '-game'
 
 dependencies {
   api "com.badlogicgames.ashley:ashley:$ashleyVersion"
