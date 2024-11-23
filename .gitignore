@@ -14,6 +14,7 @@ gradle-app.setting
 /headless/build/
 /server/build/
 /shared/build/
+build/
 
 ## Java:
 *.class
@@ -58,7 +59,6 @@ www-test/
 # Not sure yet...
 
 ## IntelliJ, Android Studio:
-##.idea/
 *.ipr
 *.iws
 *.iml
