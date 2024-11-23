@@ -10,8 +10,15 @@ buildscript {
   }
   dependencies {
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-
   }
+}
+
+plugins {
+  id("org.jlleitschuh.gradle.ktlint") version "$klintVersion"
+}
+
+ktlint {
+  ignoreFailures = false
 }
 
 allprojects {
@@ -56,12 +63,13 @@ configure(subprojects) {
     options.incremental = true
   }
   compileKotlin.compilerOptions.jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
-  
+
 }
 
 subprojects {
   version = '$projectVersion'
   ext.appName = 'Tint'
+
   repositories {
     mavenCentral()
     maven { url 'https://s01.oss.sonatype.org' }
